@@ -1,0 +1,1 @@
+recursive-include ultralytics_lesions/cfg *.yaml

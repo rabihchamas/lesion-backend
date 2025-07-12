@@ -19,6 +19,10 @@ LOCAL_classifier_CHECKPOINT_PATH = "checkpoints/efficientnet_b0_8e-0.156_2025-06
 app = FastAPI()
 model = None
 
+@app.get("/")
+def root():
+    return {"message": "Lesion detection backend is up and running!"}
+
 def download_yolo_checkpoint():
     """Download YOLO checkpoint from S3 if not exists locally"""
     if not os.path.exists(LOCAL_YOLO_CHECKPOINT_PATH):

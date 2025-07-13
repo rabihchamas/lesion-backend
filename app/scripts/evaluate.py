@@ -16,7 +16,7 @@ def plot_boxes_on_image(image_path, boxes, predictions, default_color=(255, 0, 0
             pred = predictions[i]
             color = highlight_color if pred > threshold else default_color
             #label = f"{pred:.2f}"
-            label = "Melanoma" if pred > threshold else "Benign"
+            label = "Suspicious (model)" if pred > threshold else "Benign (model)"
             # Put prediction label
             cv2.putText(img, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
         else:

@@ -4,7 +4,7 @@ import os
 import platform
 import torch
 import torchvision.ops as ops
-from app.scripts.cnn_preds import cnn_model_predict
+from lesion.scripts.cnn_preds import cnn_model_predict
 
   
 
